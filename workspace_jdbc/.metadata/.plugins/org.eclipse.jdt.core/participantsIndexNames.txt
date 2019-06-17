@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\source\workspace_jdbc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3809479651.index
+\ExDB_JSP\src
+C:\source\workspace_jdbc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3737106073.index
+\ExDB_JSP2\src

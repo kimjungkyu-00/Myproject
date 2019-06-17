@@ -1,0 +1,17 @@
+
+public class ExMain {
+
+	public static void main(String[] args) {
+		
+		MyDB mydb = new MyDB();
+		
+		mydb.connect();
+		
+		//mydb.insertStudent("15741", "김정규", "백수과");
+		
+		//mydb.deleteStudent("밍밍밍");
+		mydb.serchName("이기자");
+		
+		mydb.close();
+	}
+}

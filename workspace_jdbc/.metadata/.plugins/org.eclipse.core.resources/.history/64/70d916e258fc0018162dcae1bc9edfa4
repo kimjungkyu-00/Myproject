@@ -1,0 +1,104 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class ExDB {
+	
+	final static String DRIVER = "com.mysql.cj.jdbc.Driver";
+	String url = "jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
+	String id = "root";
+	String pw = "1234";
+	Connection conn = null;
+	Statement statement=null;
+
+
+	
+	public ExDB() {
+		//1.java my sql driver를 생성)로드)
+		try {
+			Class.forName(DRIVER).newInstance();
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+	public  void connect(String id, String pw) {
+			this.id=id;
+			this.pw=pw;
+		try {		
+		//2. 로드한 driver로 mysql 접속 (서버에 연결하기)
+		conn= DriverManager.getConnection(url,id,pw);
+		System.out.println("DB연결 성공");
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<Student> getStudentlist() {
+		//db에서 query한 결과를 저장하기 위한 arraylist를 생성한다.
+		ArrayList<Student> list = new ArrayList<Student>();
+		
+		ResultSet setlist = execQuery("select * from student");
+		
+		try {
+			while(setlist.next()) {
+				//qurey 레코드 내용을 저장하기 위하여 객체생성
+				Student newSt = new Student();
+				//생성한 객체에 query한 결과를 넣는다.
+				newSt.setDept(setlist.getString("id"));
+				newSt.setName(setlist.getString("name"));
+				newSt.setName(setlist.getString("dept"));
+				//저장한 객체를 student list추가
+				//student list 추가
+				
+				list.add(newSt);
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+	
+	private ResultSet execQuery(String query) {
+		ResultSet resultset = null;
+		//3. 쿼리를 보낼 statement 객체 생성
+				try {
+					statement = conn.createStatement();
+					
+				//4. 쿼리 전송
+				 resultset=	statement.executeQuery(query);
+
+				//6. 쿼리 statement 자원해제
+				//resultset.close();
+				
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		return resultset;
+	}
+	
+	
+	public void close() {
+		//7. drvier 자원해제
+			try {
+				if(statement != null) {
+					statement.close();
+				}
+				if (conn != null) {
+				conn.close();
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+}
+

@@ -1,0 +1,45 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class MyDB {
+	
+	final static String DRIVER ="com.mysql.ch.jdbc.Driver";
+	String url="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
+	String dbId="root";
+	String dbPw="1234";
+	Connection conn=null;
+	Statement statement=null;
+	
+	public MyDB() {
+		//드라이브 로드
+
+		try {
+			Class.forName(DRIVER).newInstance();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+	public void connect() {
+		// my sql 연결하기
+		try {
+			conn = DriverManager.getConnection(url, dbId, dbPw);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<Pet> getPetList(String name) {
+		Statement statement=null;
+		
+		ArrayList<Pet> PetList = new ArrayList<Pet>();
+	}
+	
+}

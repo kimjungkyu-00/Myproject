@@ -1,0 +1,12 @@
+import java.sql.*;
+
+public class ExMain {
+
+	public static void main(String[] args) {
+		
+		MyDB2 mydb = new MyDB2();
+		
+	
+		
+	}
+}

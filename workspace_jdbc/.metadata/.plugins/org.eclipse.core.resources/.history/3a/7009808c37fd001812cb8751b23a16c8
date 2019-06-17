@@ -1,0 +1,16 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class MyDB {
+	
+	
+	public MyDB() {
+		Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		
+	}
+	public connect() {
+		Connection conn= DriverManager.getConnection(
+				"jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC",
+				"root", "1234");
+	}
+}

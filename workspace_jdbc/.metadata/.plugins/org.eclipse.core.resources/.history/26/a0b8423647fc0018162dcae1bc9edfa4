@@ -1,0 +1,42 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		//1.java my sql driver를 생성
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		
+		
+		//2. 로드한 driver로 mysql 접속
+		Connection conn = null;	
+				conn= DriverManager.getConnection(
+						"jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC","root", "1234");
+			
+			
+			System.out.println("DB연결 성공");
+		//3. 쿼리를 보낼 statement 객체 생성
+		
+		//4. 쿼리 전송
+
+		//5. 쿼리 결과 출력
+
+		//6. 쿼리 statement 자원해제
+
+		//7. drvier 자원해제
+
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}
+

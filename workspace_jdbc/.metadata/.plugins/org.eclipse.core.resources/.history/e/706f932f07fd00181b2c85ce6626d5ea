@@ -1,0 +1,25 @@
+
+public class Pet {
+	String name;
+	String editBirth;
+	
+	public Pet(String name, String editBirth) {
+		this.name=name; this.editBirth=editBirth;
+	}
+	
+	public Pet() {}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEditBirth() {
+		return editBirth;
+	}
+	public void setEditBirth(String editBirth) {
+		this.editBirth = editBirth;
+	}
+	
+}

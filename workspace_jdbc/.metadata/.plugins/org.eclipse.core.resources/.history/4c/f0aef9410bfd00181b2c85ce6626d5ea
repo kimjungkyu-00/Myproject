@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+
+public class ExMain {
+
+	public static void main(String[] args) {
+		MyDB mydb = new MyDB();
+		
+		//db연결
+		mydb.connect();
+		
+		ArrayList<Pet> plist = mydb.getPetList();
+
+		if(plist !=null) {
+		for(int i=0;i<plist.size();++i) {
+			Pet pet = plist.get(i);
+			System.out.print(pet.getName());
+			System.out.print(pet.getOwner());
+			System.out.println(pet.getSpecies());
+		}
+		}
+		
+		mydb.editPetBirth(String name,String editBirth);
+		Pet pet = new pet();
+		mydb.insertPet(pet);
+		
+		졸립니당..
+		//db해제
+		mydb.close();
+	}
+}

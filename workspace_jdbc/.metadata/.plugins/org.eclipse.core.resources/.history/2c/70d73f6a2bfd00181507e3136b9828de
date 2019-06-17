@@ -1,0 +1,32 @@
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Date;
+
+public class ExMain {
+
+	public static void main(String[] args) throws SQLException {
+		MyDB mydb = new MyDB();
+		
+		//db연결
+		mydb.connect();
+		
+		ArrayList<Pet> plist = mydb.getPetList();
+
+		if(plist !=null) {
+		for(int i=0;i<plist.size();++i) {
+			Pet pet = plist.get(i);
+			System.out.print(pet.getName());
+			System.out.print("\t"+pet.getOwner());
+			System.out.print("\t"+pet.getSpecies());
+			System.out.println();
+		}
+	}
+		mydb.editPetBirth("Whistler","2018-01-01");
+		Pet newPet = new Pet("pet","tom","dog",new Date(new java.util.Date(2017,02,01)));
+		mydb.insertPet(newPet);
+		
+		//db해제
+		mydb.close();
+	
+	}
+}

@@ -1,0 +1,83 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ExDB {
+	
+	Connection conn = null;
+	
+	public  void connect() {
+		
+		//1.java my sql driver를 생성)로드)
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		
+		
+		
+		//2. 로드한 driver로 mysql 접속 (서버에 연결하기)
+
+			conn= DriverManager.getConnection(
+							"jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC","root", "1234");
+		
+		System.out.println("DB연결 성공");
+	} catch (InstantiationException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (IllegalAccessException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
+	public void execQuery() {
+		//3. 쿼리를 보낼 statement 객체 생성
+		Statement statement;
+		try {
+			statement = conn.createStatement();
+		
+		
+		//4. 쿼리 전송
+		ResultSet resultset=
+				statement.executeQuery("select * from student");
+
+		//5. 쿼리 결과 출력
+		while(resultset.next()) {
+			System.out.println("id : "+resultset.getString("id"));
+			System.out.println("name : "+resultset.getString("name"));
+			System.out.println("dept : "+resultset.getString("dept"));
+			System.out.println();
+			
+		}
+
+		//6. 쿼리 statement 자원해제
+		resultset.close();
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+//		statement.executeUpdate("delete from student");
+//		System.out.println("삭제하기");
+		
+		
+	}
+	
+	public void close() {
+		//7. drvier 자원해제
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+}
+

@@ -1,0 +1,28 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class MyDB {
+	final static String DRIVER = "com.mysql.cj.jdbc.Driver";
+	String url="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
+	String dbId="root";
+	String dbPw="1234";
+	
+	
+	public MyDB() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public connect() {
+		conn= DriverManager.getConnection(url,dbId,dbPw);
+		statement = conn.createStatement();
+
+	}
+}

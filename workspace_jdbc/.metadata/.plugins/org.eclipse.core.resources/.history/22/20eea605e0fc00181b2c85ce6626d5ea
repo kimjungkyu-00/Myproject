@@ -1,0 +1,24 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class ExMain {
+
+	public static void main(String[] args) {
+		
+		//1. driver 로드
+		Class.forName("com.mysql.cj.Driver").newInstance();
+		
+		//2. mysql에 연결하기.
+		String url="jdbc:mysql://localhost:3306/mydb?severTimezone=UTC";
+		String dbId="root";
+		String dbPw="1234";
+		Connection conn= DriverManager.getConnection(url, dbId, dbPw);
+		
+		//3.쿼리전송을 위한 Statement생성
+		Statement statement = conn.createStatement();
+		
+		//쿼리 전송
+		String query = "INSERT INTO STUDENT values";
+	}
+
+}

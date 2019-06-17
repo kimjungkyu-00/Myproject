@@ -1,0 +1,53 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ExMain {
+
+	public static void main(String[] args) {
+		
+		//1. driver 로드
+		try {
+			Class.forName("com.mysql.cj.Driver").newInstance();
+		
+		
+		//2. mysql에 연결하기.
+		String url="jdbc:mysql://localhost:3306/mydb?severTimezone=UTC";
+		String dbId="root";
+		String dbPw="1234";
+		Connection conn;
+		
+			conn = DriverManager.getConnection(url, dbId, dbPw);
+		
+		//3.쿼리전송을 위한 Statement생성
+		Statement statement = conn.createStatement();
+		
+		//4. 쿼리 전송
+		String query = "INSERT INTO STUDENT values('161211','박보영','웹프로그래밍')";
+		int ret = statement.executeUpdate(query);
+		
+		System.out.println("insert 결과 : "+ret);
+		
+		//5. statement자원해제
+		statement.close();
+		
+		//6. db연결 자원해제
+		conn.close();
+	
+	} catch (InstantiationException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (IllegalAccessException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+		
+	}
+}

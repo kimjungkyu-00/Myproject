@@ -1,0 +1,43 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ExMain {
+
+	public static void main(String[] args) {
+		//1. jdbc 드라이버 생성(로드)
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		
+		//2. 서버에 연결하기
+			Connection conn= DriverManager.getConnection(
+				"jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC",
+				"root", "1234");
+	
+		System.out.println("db연결완료");
+		//3. 쿼리 전송을위한 statement 생성
+		Statement statment ;
+		//4. 쿼리문 전송
+
+		//5.수행된 쿼리문 출력
+
+		//6. 쿼리 statement 자원해제
+
+		//7.드라이버 (conect)자원해제
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

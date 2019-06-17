@@ -1,0 +1,20 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class MyDB {
+	
+	String url="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
+	String dbId="root";
+	String dbPw="1234";
+	
+	
+	public MyDB() {
+		Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		
+	}
+	public connect() {
+		conn= DriverManager.getConnection(url,dbId,dbPw);
+		statement = conn.createStatement();
+
+	}
+}

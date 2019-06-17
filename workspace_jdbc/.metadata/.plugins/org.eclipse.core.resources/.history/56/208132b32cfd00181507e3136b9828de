@@ -1,0 +1,110 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class MyDB {
+	
+	final static String DRIVER ="com.mysql.cj.jdbc.Driver";
+	String url="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
+	String dbId="root";
+	String dbPw="1234";
+	Connection conn;
+	Statement statement;
+	
+	public MyDB() {
+		//드라이브 로드
+
+		try {
+			Class.forName(DRIVER).newInstance();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+	public void connect() throws SQLException {
+		// my sql 연결하기
+			conn = DriverManager.getConnection(url, dbId, dbPw);
+			statement= conn.createStatement();
+	}
+	
+	public ArrayList<Pet> getPetList() {
+		ArrayList<Pet> list=null;
+		list = new ArrayList<Pet>();
+	
+		//3.2 쿼리전송
+		String query="SELECT * FROM PET";
+		ResultSet resultset = statement.executeQuery(query);
+		
+		//3.3 쿼리결과 출력
+		//쿼리결과 -list에 넣어주기
+		while(resultset.next()) {
+			Pet petlist = new Pet(resultset.getString("name"),
+								resultset.getString("owner"),
+								resultset.getString("species"),
+								resultset.getDate("birth"));
+			list.add(petlist);
+		}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				statement.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}
+	
+	public void editPetBirth(String name,String editBirth) throws SQLException {
+		//쿼리전송
+		//쿼리전송을위한 statement 생성
+		Statement statement=null;
+		
+		statement = conn.createStatement();
+		try {
+		//쿼리전송
+		String query ="update PET set birth='"+editBirth+"'where name='"+name+"'";
+		statement.executeUpdate(query);
+		
+		}finally { 
+			if(null !=statement)
+			statement.close();
+		//statement 자원해제
+		}
+	}
+	
+	public void close() throws SQLException {
+		if(statement != null) {
+			statement.close();
+		}
+	}
+	
+	public int insertPet(Pet pet) {
+		int ret=-1;		
+		try {
+			statement = conn.createStatement();
+	
+		String query="INSERT INTO PET(name,owner,species,birth)"
+						+"values('"+pet.getName()+"','"+pet.getOwner()+"','"+
+									pet.getSpecies()+"','"
+									+pet.getBirth()+"')";
+	 ret = statement.executeUpdate(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			
+		}
+		return ret;
+		
+		}
+	}
+
