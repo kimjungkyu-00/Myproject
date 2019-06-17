@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spring.mvc.dto.CommentVO">
+
+	
+	<insert id="insertComment">
+		insert into tbl_comment(contents,boardidx,writer)values(
+		<!-- 게시판내용 -->
+
+		#{contents},
+		#{boardidx},
+		#{writer})
+		<selectKey order="AFTER" resultType="Integer"
+			keyProperty="idx">SELECT LAST_INSERT_ID() </selectKey>
+
+	</insert>
+
+
+	<select id="CommentList" resultType="spring.mvc.dto.CommentVO">
+		select * from tbl_comment where boardidx = #{boardidx}
+	</select>
+
+	<select id="getComment" resultType="spring.mvc.dto.CommentVO">
+		SELECT *
+		FROM tbl_comment
+		WHERE idx = #{commentIdx}
+	</select>
+
+
+	<update id="UpdateComment">
+		update tbl_comment
+		set contents = #{contents}
+		where idx = #{idx}
+
+	</update>
+
+	<delete id="DeleteComment">
+		delete from tbl_comment where idx = #{idx}
+
+	</delete>
+
+
+</mapper>

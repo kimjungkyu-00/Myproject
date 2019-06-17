@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+
+	<insert id="insertBoard" parameterType="BoardVO">
+		insert into
+		tbl_board(sel_board, writer, area, sel_date, content, fileName,
+		dogKind, gender, count)
+		values (
+		#{sel_board},
+		#{writer},
+		#{area},
+		#{sel_date},
+		#{content},
+		#{fileName},
+		#{dogKind},
+		#{gender},
+		#{count}
+		)
+	</insert>
+
+
+	<select id="listBoard" resultType="BoardVO">
+		select * from tbl_board order
+		by board_no desc
+	</select>
+
+	<select id="viewFindBoard" resultType="BoardVO">
+		SELECT * FROM tbl_board
+		WHERE board_no = #{board_no}
+	</select>
+
+	<update id="findUpdateForm">
+		update tbl_board
+		set 
+		sel_board = #{sel_board},
+		content = #{content}, 
+		dogKind = #{dogKind},
+		gender = #{gender}
+		where
+		board_no = #{board_no}
+	</update>
+	
+	<update id="countBoard" parameterType="Integer"> 
+
+		UPDATE tbl_board set count = count + 1 where board_no = #{board_no}
+
+	</update>
+
+	<delete id="findDeleteForm">
+		delete from tbl_board where board_no = #{board_no}
+	</delete>
+
+
+	<sql id="search">
+		<if test="searchOption == 'all' and searchOption1=='all'">
+			content like CONCAT('%', #{keyword},'%') or writer like CONCAT('%', #{keyword},'%')
+			or area like CONCAT('%', #{keyword},'%')
+		</if>
+		<if test= "searchOption1=='all'" >
+			sel_board = #{searchOption} 
+			and (content like CONCAT('%', #{keyword},'%') 
+			or writer like CONCAT('%', #{keyword},'%')
+			or area like CONCAT('%', #{keyword},'%'))
+		</if>
+		<if test= "searchOption1=='content'" >
+			sel_board = #{searchOption} and content like CONCAT('%', #{keyword},'%')
+		</if>
+		<if test= "searchOption1=='area'" >
+			sel_board = #{searchOption} and area like CONCAT('%', #{keyword},'%')
+		</if>
+		<if test= "searchOption1=='writer'" >
+			sel_board = #{searchOption} and writer like CONCAT('%', #{keyword},'%')
+		</if>
+	</sql>
+
+
+
+	<select id="searchList" resultType="BoardVO" parameterType="java.util.Map">
+		select * from tbl_board
+		where 1=1
+		<include refid="search"></include>
+		order by board_no desc
+
+	</select>
+	
+	
+	<!-- 페이징 처리 -->
+	<!-- 이때 중요한 점! 띄워줄 시작 페이지 번호는 현재 페이지인 page 변수가 오는게 아니라, (page-1) * perPageNum 
+		값이 와야한다.!! 헌데, #{pageStart} 는 받은 객체의 get 메서드를 호출하기 때문에 getPageStart() 메서드를 
+		호출하게 되고, Criteria 클래스의 getPageStart에서 위의 계산식을 반환하도록 해났음으로 시작 페이지 튜플의 행번호를 
+		가져올 수 있다. -->
+	<select id="listCriteria" resultType="BoardVO"> <!-- typeAlias를 지정했음으로 풀 네임 기재 필요 없음 -->
+		<![CDATA[
+			select * from tbl_board where board_no > 0 order by board_no desc limit #{pageStart}, #{perPageNum}
+		]]>
+	</select>
+
+	<!-- 전체 게시글 수를 구하는 sql문 -->
+	<select id="getTotalCount" resultType="Integer">
+		select count(*) from
+		tbl_board
+	</select>
+	
+	<select id="listSearch" resultType="BoardVO"  parameterType="java.util.Map">
+        select * 
+        from tbl_board
+        where
+      <!-- sql문 중복시 없애주고 재사용기능을 위해서 include 추가 -->
+      <include refid="search"></include>
+      <!-- #{pageStart} 는 받은 객체의 get 메서드를 호출하기 때문에 getPageStart() 메서드를 호출, Criteria 
+         클래스의 getPageStart에서 위의 계산식을 반환 -->
+   <![CDATA[    
+        order by board_no desc limit #{pageStart}, #{perPageNum}
+   ]]>
+	</select>
+	
+	<select id="listSearchCount" resultType="Integer">
+		<![CDATA[  
+        select count(*)
+        from tbl_board
+        where 
+      ]]>
+      <!-- sql문 중복시 없애주고 재사용기능을 위해서 include 추가 -->
+      <include refid="search"></include>
+
+	</select>
+	
+	
+
+
+</mapper>

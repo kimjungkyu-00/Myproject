@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+ <mapper namespace ="spring.mvc.dto.NoticeVO">
+ 
+ 	<insert id="insertNotice" parameterType= "NoticeVO">
+ 		insert into tbl_notice (ntitle,ncontent,nwriter)
+ 		values(
+ 			#{ntitle}, <!-- 게시판내용 -->
+ 			#{ncontent},
+ 			#{nwriter}
+ 		)
+ 	</insert>
+ 	
+ 	<select id="NoticeListAll" resultType= "NoticeVO">
+ 		select * from tbl_notice order by nidx desc
+ 	</select>
+ 	
+ 	<select id="NoticelList"  resultType= "NoticeVO">
+        SELECT *
+        FROM tbl_notice
+        WHERE nidx = #{nidx}
+    </select>
+ 	
+ 	<update id="NoticeUpdate">
+        update tbl_notice 
+        set ntitle = #{ntitle}, ncontent = #{ncontent}
+        where nidx = #{nidx}
+    </update>
+    
+ 	<delete id="NoticeDelete">
+		delete from tbl_notice where nidx = #{nidx}
+	
+	</delete>
+ 	
+ </mapper>

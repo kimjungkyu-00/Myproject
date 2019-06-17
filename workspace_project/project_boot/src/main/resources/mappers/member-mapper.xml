@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+
+	<insert id="insertMember" parameterType="spring.mvc.dto.MemberVO">
+		insert into tbl_member(userid, userpw, username, tel, postno, addr, addr_detail)
+		values (
+			#{userid},					
+			#{userpw},					
+			#{username},			
+			#{tel},					
+			#{postno},				
+			#{addr},				
+			#{addr_detail}		
+		)
+	</insert>
+
+	
+	<select id="checkDuplicationId" parameterType="String" resultType="integer">
+		select count(*) as existIdNum From tbl_member 
+		where userid = #{inputId}
+	</select>
+
+	<select id ="memberInfo" resultType= "spring.mvc.dto.MemberVO" parameterType="spring.mvc.dto.MemberVO">
+		select * from tbl_member
+		where userid =  #{userid} and userpw =  #{userpw}
+	</select>
+	
+	<update id="update" parameterType="spring.mvc.dto.MemberVO">
+		 update tbl_member
+		 set userpw = #{userpw} , username = #{username} , tel = #{tel} ,
+		 postno = #{postno},  addr = #{addr}, addr_detail = #{addr_detail}
+		 where userid = #{userid}  
+	</update>
+	
+	<delete id="delete" parameterType="spring.mvc.dto.MemberVO">
+		delete from tbl_member where userid = #{userid}
+	
+	</delete>
+	
+	<select id="memberList" resultType="java.util.HashMap">
+		select * from tbl_member
+	</select>
+	
+	<select id="getMember" resultType="spring.mvc.dto.MemberVO">
+		select * from tbl_member where userid= #{userid}
+	</select>
+	
+
+	
+
+
+
+</mapper>

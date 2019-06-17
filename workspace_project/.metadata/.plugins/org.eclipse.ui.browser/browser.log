@@ -1,0 +1,234 @@
+
+2월 14, 2019 09:49:32.87 NEW SESSION
+2월 14, 2019 09:49:32.87 [14084:13660:0214/094932.870:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 14, 2019 09:50:02.53 [14084:13660:0214/095002.535:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 14, 2019 09:50:54.02 [14084:13660:0214/095054.026:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 14, 2019 09:50:55.01 [14084:9960:0214/095055.012:ERROR:textfield.cc(1777)] NOT IMPLEMENTED
+2월 14, 2019 09:52:38.93 [14084:13660:0214/095238.933:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 14, 2019 09:53:27.72 [14084:13660:0214/095327.723:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -21
+2월 14, 2019 10:19:04.82 [14084:3588:0214/101904.826:ERROR:platform_sensor_reader_win.cc(242)] NOT IMPLEMENTED
+2월 14, 2019 11:03:28.72 [14084:3588:0214/110328.725:ERROR:platform_sensor_reader_win.cc(242)] NOT IMPLEMENTED
+2월 14, 2019 11:03:40.59 [14084:3588:0214/110340.594:ERROR:platform_sensor_reader_win.cc(242)] NOT IMPLEMENTED
+
+2월 15, 2019 20:51:09.36 NEW SESSION
+2월 15, 2019 20:51:09.36 [1936:9184:0215/205108.950:ERROR:socket_stream.cc(219)] Closing stream with result -2
+2월 15, 2019 20:51:09.52 [1936:9184:0215/205108.987:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -21
+2월 15, 2019 20:51:09.56 [1936:264:0215/205108.987:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 15, 2019 20:51:11.01 [1936:9184:0215/205111.018:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 02:00:50.34 [1936:264:0216/020050.348:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 16, 2019 02:00:50.87 [1936:9184:0216/020050.391:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 03:14:49.01 [1936:9184:0216/031449.015:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 03:17:28.98 [1936:9184:0216/031728.986:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 03:17:52.21 [1936:9184:0216/031752.213:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 03:18:41.41 [1936:9184:0216/031841.419:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 03:20:09.08 [1936:9184:0216/032009.081:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 03:23:12.88 [1936:9184:0216/032312.881:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 03:29:03.26 [1936:9184:0216/032903.267:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 06:30:08.29 [1936:264:0216/063007.530:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 16, 2019 06:30:08.30 [1936:9184:0216/063007.530:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 17:18:54.21 [1936:264:0216/171854.215:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 16, 2019 17:18:54.38 [1936:9184:0216/171854.217:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 17:19:04.78 [1936:9184:0216/171904.785:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -21
+2월 16, 2019 18:07:42.73 [1936:9184:0216/180742.731:ERROR:ssl_client_socket_impl.cc(1013)] handshake failed; returned -1, SSL error code 1, net_error -101
+2월 16, 2019 18:18:58.24 [1936:9184:0216/181858.248:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 18:19:19.07 [1936:9184:0216/181919.078:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 18:20:17.06 [1936:9184:0216/182017.060:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 18:21:51.84 [1936:9184:0216/182151.841:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 18:24:40.13 [1936:9184:0216/182440.131:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 18:30:31.37 [1936:9184:0216/183031.379:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 16, 2019 21:32:22.30 [1936:264:0216/213222.303:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 16, 2019 21:32:22.31 [1936:9184:0216/213222.303:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -21
+2월 16, 2019 21:32:22.32 [1936:9184:0216/213222.303:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+2월 16, 2019 21:32:46.64 [1936:264:0216/213246.644:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 16, 2019 21:32:50.55 [1936:9184:0216/213250.552:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+2월 17, 2019 16:43:35.56 [1936:264:0217/164335.562:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 17, 2019 16:43:36.34 [1936:9184:0217/164335.562:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+2월 17, 2019 16:43:36.42 [1936:9184:0217/164335.562:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 16:43:42.77 [1936:9184:0217/164342.772:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -21
+2월 17, 2019 17:42:26.07 [1936:9184:0217/174226.073:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 18:53:16.08 [1936:9184:0217/185316.086:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 18:53:36.96 [1936:9184:0217/185336.968:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 18:54:35.46 [1936:9184:0217/185435.466:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 18:56:04.90 [1936:9184:0217/185604.903:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 18:59:35.62 [1936:9184:0217/185935.622:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 19:03:28.78 [1936:9184:0217/190328.784:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -21
+2월 17, 2019 19:04:10.95 [1936:9184:0217/190410.956:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 19:22:59.51 [1936:264:0217/192259.519:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 17, 2019 19:23:00.29 [1936:9184:0217/192259.523:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 19:23:23.53 [1936:264:0217/192323.538:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 17, 2019 19:23:51.99 [1936:9184:0217/192351.994:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 19:24:18.34 [1936:264:0217/192418.348:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 17, 2019 19:25:40.60 [1936:264:0217/192540.601:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 17, 2019 19:25:47.65 [1936:9184:0217/192547.651:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 19:29:32.29 [1936:9184:0217/192932.293:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 19:29:35.94 [1936:264:0217/192935.948:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 17, 2019 19:32:12.10 [1936:9184:0217/193212.100:ERROR:connection_factory_impl.cc(408)] Failed to connect to MCS endpoint with error -106
+2월 17, 2019 21:48:33.53 [1936:33844:0217/214833.538:ERROR:platform_sensor_reader_win.cc(242)] NOT IMPLEMENTED
+2월 17, 2019 22:33:56.09 [1936:264:0217/223356.096:ERROR:media_internals.cc(114)] Cannot get RenderProcessHost
+
+2월 19, 2019 22:38:08.11 NEW SESSION
+2월 19, 2019 22:38:08.11 [3356:13360:0219/223808.112:ERROR:browser_process_sub_thread.cc(209)] Waited 12 ms for network service
+2월 19, 2019 22:38:36.74 [2276:9540:0219/223836.744:ERROR:browser_process_sub_thread.cc(209)] Waited 13 ms for network service
+
+2월 20, 2019 14:55:21.30 NEW SESSION
+2월 20, 2019 14:55:21.30 [14348:12376:0220/145521.293:ERROR:textfield.cc(1777)] NOT IMPLEMENTED
+2월 20, 2019 15:02:15.87 [13332:7588:0220/150215.876:ERROR:textfield.cc(1777)] NOT IMPLEMENTED
+2월 20, 2019 15:06:31.50 [13988:15288:0220/150631.499:ERROR:textfield.cc(1777)] NOT IMPLEMENTED
+2월 20, 2019 16:47:04.71 [11376:2092:0220/164704.717:ERROR:socket_stream.cc(219)] Closing stream with result -2
+2월 20, 2019 16:47:04.76 [11376:2092:0220/164704.760:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -105
+2월 20, 2019 16:47:08.18 [11376:2092:0220/164708.188:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 20, 2019 16:56:59.08 [11376:14820:0220/165659.083:ERROR:textfield.cc(1777)] NOT IMPLEMENTED
+2월 20, 2019 17:02:33.28 [11376:2092:0220/170233.286:ERROR:socket_stream.cc(219)] Closing stream with result -2
+2월 20, 2019 17:57:18.84 [11376:2092:0220/175718.844:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 20, 2019 17:57:39.11 [11376:2092:0220/175739.118:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 20, 2019 17:58:26.47 [11376:2092:0220/175826.473:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 20, 2019 18:00:03.99 [11376:2092:0220/180003.994:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 20, 2019 18:01:25.76 [11376:2092:0220/180125.760:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 20, 2019 18:02:02.63 [11376:2092:0220/180202.637:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 20, 2019 18:03:50.22 [11376:2092:0220/180350.224:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 20, 2019 18:04:42.56 [11376:2092:0220/180442.568:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 20, 2019 19:42:56.32 [11376:2092:0220/194256.326:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 24:06:23.70 [11376:2092:0221/000623.705:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 24:06:49.79 [11376:2092:0221/000649.797:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 24:07:46.08 [11376:2092:0221/000746.080:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 24:09:06.74 [11376:2092:0221/000906.742:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 24:12:17.00 [11376:2092:0221/001217.008:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 24:14:30.10 [11376:14820:0221/001430.104:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 21, 2019 24:14:54.90 [11376:14820:0221/001454.907:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 21, 2019 24:15:41.64 [11376:14820:0221/001541.640:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 21, 2019 24:17:34.68 [11376:14820:0221/001734.687:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 21, 2019 24:19:10.54 [11376:2092:0221/001910.542:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 03:19:46.28 [11376:14820:0221/031945.518:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 21, 2019 03:19:46.31 [11376:2092:0221/031945.524:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 09:32:13.50 [11376:14820:0221/093213.506:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 21, 2019 09:32:14.31 [11376:2092:0221/093213.514:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 09:34:07.17 [11376:2092:0221/093407.177:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 21, 2019 10:35:18.77 [11376:2092:0221/103518.774:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 10:35:39.16 [11376:2092:0221/103539.159:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 10:36:13.18 [11376:2092:0221/103613.179:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -100
+2월 21, 2019 10:36:30.90 [11376:2092:0221/103630.907:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -105
+2월 21, 2019 10:36:40.70 [11376:2092:0221/103640.702:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -105
+2월 21, 2019 10:36:44.18 [11376:2092:0221/103644.185:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 21, 2019 10:37:54.95 [11376:2092:0221/103754.949:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -100
+2월 21, 2019 13:40:21.35 [11376:2092:0221/134021.355:ERROR:browser_process_sub_thread.cc(209)] Waited 20 ms for network service
+2월 21, 2019 17:53:28.61 [17788:11132:0221/175328.609:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 17:53:54.06 [17788:11132:0221/175354.060:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 17:54:52.54 [17788:11132:0221/175452.545:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 17:56:27.58 [17788:11132:0221/175627.581:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 17:56:34.20 [17788:11132:0221/175634.202:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 21, 2019 17:57:38.22 [17788:11132:0221/175738.222:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 21, 2019 17:58:35.38 [17788:11132:0221/175835.388:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 18:00:22.27 [17788:11132:0221/180022.270:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 18:01:03.83 [17788:11132:0221/180103.838:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 18:02:56.65 [17788:11132:0221/180256.655:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 18:06:32.85 [17788:11132:0221/180632.854:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 19:41:19.52 [17788:17920:0221/194119.519:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 21, 2019 19:41:20.33 [17788:11132:0221/194119.524:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 22:09:17.27 [17788:17920:0221/220916.503:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 21, 2019 22:31:17.22 [17788:11132:0221/223117.222:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 21, 2019 23:17:54.78 [17788:11132:0221/231754.781:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 23:18:14.96 [17788:11132:0221/231814.967:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 23:18:59.93 [17788:11132:0221/231859.936:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 21, 2019 23:20:00.29 [17788:11132:0221/232000.289:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 22, 2019 24:00:39.98 [17788:11132:0222/000039.987:ERROR:browser_process_sub_thread.cc(209)] Waited 26 ms for network service
+
+2월 22, 2019 09:37:16.88 NEW SESSION
+2월 22, 2019 09:37:16.88 [15760:4768:0222/093716.878:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 09:37:30.93 [15760:4768:0222/093730.931:ERROR:browser_process_sub_thread.cc(209)] Waited 13 ms for network service
+2월 22, 2019 09:44:45.38 [2320:15396:0222/094445.383:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 09:45:10.86 [2320:15396:0222/094510.869:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 09:45:52.58 [2320:15396:0222/094552.583:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 09:47:33.01 [2320:15396:0222/094733.015:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 09:50:21.20 [2320:15396:0222/095021.206:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 09:52:07.19 [2320:2544:0222/095207.195:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 22, 2019 09:52:34.84 [2320:2544:0222/095234.845:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 22, 2019 09:53:16.28 [2320:2544:0222/095316.287:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 22, 2019 09:55:05.94 [2320:2544:0222/095505.943:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 22, 2019 09:55:32.68 [2320:15396:0222/095532.685:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 22, 2019 10:43:00.17 [2320:15396:0222/104300.173:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 10:43:29.36 [2320:15396:0222/104329.360:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 10:44:24.01 [2320:15396:0222/104424.017:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 10:46:11.89 [2320:15396:0222/104611.898:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 10:49:15.23 [2320:15396:0222/104915.230:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 10:55:54.44 [2320:15396:0222/105554.440:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 11:01:33.06 [2320:15396:0222/110133.065:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -105
+2월 22, 2019 11:01:44.68 [2320:15396:0222/110144.686:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 22, 2019 11:16:09.92 [2320:2544:0222/111609.926:ERROR:textfield.cc(1777)] NOT IMPLEMENTED
+2월 22, 2019 12:38:10.99 [2320:15396:0222/123810.995:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -105
+2월 22, 2019 12:38:11.23 [2320:2544:0222/123811.005:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 22, 2019 12:38:16.52 [2320:15396:0222/123816.528:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -105
+2월 22, 2019 12:38:27.69 [2320:15396:0222/123827.695:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 22, 2019 12:40:02.95 [2320:15396:0222/124002.954:ERROR:socket_stream.cc(219)] Closing stream with result -2
+2월 22, 2019 12:40:06.27 [2320:15396:0222/124006.277:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 22, 2019 13:47:49.52 [2320:2544:0222/134749.527:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 22, 2019 13:47:52.05 [2320:15396:0222/134752.058:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 14:24:52.11 [2320:15396:0222/142452.115:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -7
+2월 22, 2019 14:25:44.52 [2320:15396:0222/142544.524:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -7
+2월 22, 2019 15:17:53.51 [2320:15396:0222/151753.509:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+2월 22, 2019 15:18:26.88 [2320:15396:0222/151826.882:ERROR:socket_stream.cc(219)] Closing stream with result -2
+2월 22, 2019 15:18:26.92 [2320:15396:0222/151826.890:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -109
+2월 22, 2019 15:18:31.92 [2320:15396:0222/151831.924:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -105
+2월 22, 2019 15:18:39.75 [2320:15396:0222/151839.753:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 22, 2019 15:18:48.16 [2320:15396:0222/151848.163:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 22, 2019 17:19:17.50 [2320:2544:0222/171917.503:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+2월 22, 2019 17:19:18.31 [2320:15396:0222/171918.036:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 22, 2019 17:19:23.15 [2320:15396:0222/171923.151:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+2월 22, 2019 17:59:40.65 [2320:15396:0222/175940.657:ERROR:browser_process_sub_thread.cc(209)] Waited 17 ms for network service
+
+3월 07, 2019 10:56:42.82 NEW SESSION
+3월 07, 2019 10:56:42.82 [79264:82616:0307/105642.817:ERROR:browser_process_sub_thread.cc(209)] Waited 30 ms for network service
+3월 07, 2019 11:04:36.61 [42032:62436:0307/110436.615:ERROR:browser_process_sub_thread.cc(209)] Waited 19 ms for network service
+3월 07, 2019 13:26:46.51 [70204:69780:0307/132646.515:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+3월 07, 2019 13:26:47.38 [70204:58184:0307/132647.379:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+3월 07, 2019 13:26:48.55 [70204:58184:0307/132648.555:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+3월 07, 2019 13:27:12.23 [70204:69780:0307/132712.233:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+3월 07, 2019 13:27:32.87 [70204:58184:0307/132732.877:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+3월 07, 2019 14:35:38.92 [70204:58184:0307/143538.923:ERROR:browser_process_sub_thread.cc(209)] Waited 24 ms for network service
+3월 07, 2019 14:37:31.75 [37452:82676:0307/143731.746:ERROR:browser_process_sub_thread.cc(209)] Waited 30 ms for network service
+3월 07, 2019 14:43:23.92 [53896:47932:0307/144323.927:ERROR:browser_process_sub_thread.cc(209)] Waited 21 ms for network service
+
+3월 07, 2019 15:48:46.41 NEW SESSION
+3월 07, 2019 15:48:46.41 [67844:75900:0307/154846.414:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+3월 07, 2019 18:38:51.57 [67844:75900:0307/183851.577:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+3월 07, 2019 18:39:12.93 [67844:75900:0307/183912.932:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+3월 07, 2019 18:40:12.42 [67844:75900:0307/184012.427:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+3월 07, 2019 18:41:37.63 [67844:75900:0307/184137.633:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+3월 07, 2019 18:45:31.42 [67844:75900:0307/184531.426:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+3월 07, 2019 18:51:37.47 [67844:75900:0307/185137.472:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+3월 07, 2019 21:48:05.33 [67844:75900:0307/214805.332:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+3월 07, 2019 21:48:05.36 [67844:15972:0307/214805.332:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+3월 07, 2019 21:48:33.71 [67844:15972:0307/214833.716:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+
+3월 09, 2019 21:06:53.37 NEW SESSION
+3월 09, 2019 21:06:53.37 [13812:15720:0309/210653.359:ERROR:CONSOLE(970)] "TypeError: Cannot read property 'pseudoType' of undefined TypeError: Cannot read property 'pseudoType' of undefined
+3월 09, 2019 21:06:53.40     at SDK.DOMNode._removeChild (chrome-devtools://devtools/bundled/shell.js:4290:28)
+3월 09, 2019 21:06:53.44     at SDK.DOMModel._childNodeRemoved (chrome-devtools://devtools/bundled/shell.js:4409:121)
+3월 09, 2019 21:06:53.48     at SDK.DOMDispatcher.childNodeRemoved (chrome-devtools://devtools/bundled/shell.js:4453:54)
+3월 09, 2019 21:06:53.50     at Protocol.InspectorBackend._DispatcherPrototype.dispatch (chrome-devtools://devtools/bundled/shell.js:3389:26)
+3월 09, 2019 21:06:53.53     at Protocol.SessionRouter._onMessage (chrome-devtools://devtools/bundled/shell.js:3345:41)
+3월 09, 2019 21:06:53.55     at SDK.MainConnection._dispatchMessage (chrome-devtools://devtools/bundled/shell.js:3475:17)
+3월 09, 2019 21:06:53.57     at Common.Object.dispatchEventToListeners (chrome-devtools://devtools/bundled/shell.js:488:23)
+3월 09, 2019 21:06:53.59     at innerDispatch (chrome-devtools://devtools/bundled/shell.js:970:98)
+3월 09, 2019 21:06:53.62     at Host.InspectorFrontendAPIImpl._dispatch (chrome-devtools://devtools/bundled/shell.js:970:1)
+3월 09, 2019 21:06:53.67     at DevToolsAPIImpl._dispatchOnInspectorFrontendAPI (chrome-devtools://devtools/bundled/devtools_compatibility.js:57:36)", source: chrome-devtools://devtools/bundled/shell.js (970)
+3월 09, 2019 21:09:26.15 [13812:15720:0309/210926.153:ERROR:textfield.cc(1777)] NOT IMPLEMENTED
+3월 09, 2019 21:11:25.36 [13812:15720:0309/211125.364:ERROR:CONSOLE(970)] "TypeError: Cannot read property 'pseudoType' of undefined TypeError: Cannot read property 'pseudoType' of undefined
+3월 09, 2019 21:11:25.38     at SDK.DOMNode._removeChild (chrome-devtools://devtools/bundled/shell.js:4290:28)
+3월 09, 2019 21:11:25.40     at SDK.DOMModel._childNodeRemoved (chrome-devtools://devtools/bundled/shell.js:4409:121)
+3월 09, 2019 21:11:25.42     at SDK.DOMDispatcher.childNodeRemoved (chrome-devtools://devtools/bundled/shell.js:4453:54)
+3월 09, 2019 21:11:25.43     at Protocol.InspectorBackend._DispatcherPrototype.dispatch (chrome-devtools://devtools/bundled/shell.js:3389:26)
+3월 09, 2019 21:11:25.44     at Protocol.SessionRouter._onMessage (chrome-devtools://devtools/bundled/shell.js:3345:41)
+3월 09, 2019 21:11:25.46     at SDK.MainConnection._dispatchMessage (chrome-devtools://devtools/bundled/shell.js:3475:17)
+3월 09, 2019 21:11:25.49     at Common.Object.dispatchEventToListeners (chrome-devtools://devtools/bundled/shell.js:488:23)
+3월 09, 2019 21:11:25.51     at innerDispatch (chrome-devtools://devtools/bundled/shell.js:970:98)
+3월 09, 2019 21:11:25.54     at Host.InspectorFrontendAPIImpl._dispatch (chrome-devtools://devtools/bundled/shell.js:970:1)
+3월 09, 2019 21:11:25.58     at DevToolsAPIImpl._dispatchOnInspectorFrontendAPI (chrome-devtools://devtools/bundled/devtools_compatibility.js:57:36)", source: chrome-devtools://devtools/bundled/shell.js (970)
+3월 10, 2019 01:32:59.50 [13812:15720:0310/013259.503:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+3월 10, 2019 14:49:02.50 [13812:15720:0310/144902.503:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+3월 10, 2019 14:49:57.89 [13812:15720:0310/144957.898:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+3월 10, 2019 14:51:23.61 [13812:15720:0310/145123.614:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+
+3월 10, 2019 17:19:22.47 NEW SESSION
+3월 10, 2019 17:19:22.47 [16840:5004:0310/171922.296:ERROR:textfield.cc(1777)] NOT IMPLEMENTED
+3월 10, 2019 22:13:22.50 [16840:5004:0310/221322.503:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+3월 10, 2019 22:35:58.50 [16840:5004:0310/223558.502:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.

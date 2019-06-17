@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="mvc.kim.user.vo.UserAccountVO">
+
+	<insert id="insertUserAccount" parameterType="mvc.kim.user.vo.UserAccountVO">
+		insert into writer (TITLE, CONTENT)
+		values (
+			#{title},					<!-- 게시글 제목-->
+			#{content}					<!-- 게시글 내용-->
+		)
+	</insert>
+	
+	
+	<!-- <update id="updateNotice" parameterType="com.sjh.admin.vo.NoticeVO">
+		UPDATE tbl_notice
+			SET ntitle = #{ntitle},
+				ncontent = #{ncontent}
+			WHERE
+				nno = #{nno} 
+	</update>
+	
+	<select id="noticeList" resultType="com.sjh.admin.vo.NoticeVO">
+		SELECT
+			 nno,ntitle,ncontent,nwriter,nrdate,nviewcnt,nisdelete
+		FROM 
+			 tbl_notice
+		WHERE
+			nisdelete = 'N'
+		ORDER BY nno DESC
+	</select>
+	
+	<select id="noticeRead" parameterType="com.sjh.admin.vo.NoticeVO" resultType="com.sjh.admin.vo.NoticeVO">
+		SELECT
+			nno,ntitle,ncontent,nwriter,nrdate,nviewcnt,nisdelete
+		FROM
+			tbl_notice
+		WHERE
+			nno = #{nno} 
+	</select> -->
+	
+</mapper>

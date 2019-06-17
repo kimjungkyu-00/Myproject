@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+
+	<insert id="insertBoard" parameterType="spring.mvc.dto.BoardVO">
+		insert into
+		tbl_board(sel_board, writer, area, sel_date, content, fileName,
+		dogKind, gender, count)
+		values (
+		#{sel_board},
+		#{writer},
+		#{area},
+		#{sel_date},
+		#{content},
+		#{fileName},
+		#{dogKind},
+		#{gender},
+		#{count}
+		)
+	</insert>
+
+	<select id="getListWithPaging"
+		resultType="spring.mvc.dto.BoardVO">
+		<![CDATA[
+			select 
+				board_no, writer, area, sel_date, content, fileName, dogKind, gender, count
+			from (
+				select rownum rn, board_no, writer, area, sel_date, content, fileName, dogKind, gender, count
+				from
+				tbl_board
+				where rownum <= #{pageNum} * #{amount}
+			)
+			whrer rn > (#{pageNum} -1) * #{amount}
+		]]>
+	</select>
+
+	<select id="listBoard" resultType="spring.mvc.dto.BoardVO">
+		select * from tbl_board order
+		by board_no desc
+	</select>
+
+	<select id="viewFindBoard" resultType="spring.mvc.dto.BoardVO">
+		SELECT * FROM tbl_board
+		WHERE board_no = #{board_no}
+	</select>
+
+	<update id="findUpdateForm">
+		update tbl_board
+		set content = #{content}
+		where
+		board_no = #{board_no}
+	</update>
+
+	<delete id="findDeleteForm">
+		delete from tbl_board where board_no = #{board_no}
+	</delete>
+
+
+	<sql id="search">
+		<if test="searchOption == 'all'">
+			and content like CONCAT('%', #{keyword},'%') or writer like CONCAT('%', #{keyword},'%')
+		</if>
+		<if test="searchOption == 'content'">
+			and content like CONCAT('%', #{keyword},'%')
+		</if>
+		<if test="searchOption == 'writer'">
+			and writer like CONCAT('%', #{keyword},'%')
+		</if>
+	</sql>
+
+
+
+	<select id="searchList" resultType="spring.mvc.dto.BoardVO" parameterType="java.util.Map">
+		select * from tbl_board
+		where 1=1
+		<include refid="search"></include>
+		order by board_no desc
+
+	</select>
+
+
+
+
+
+
+</mapper>

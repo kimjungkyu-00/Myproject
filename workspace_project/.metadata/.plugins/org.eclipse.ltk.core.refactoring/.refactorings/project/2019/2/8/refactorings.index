@@ -1,0 +1,89 @@
+1550538233293	Delete element
+1550538439698	Delete element
+1550538441405	Delete element
+1550538453067	Delete element
+1550539224497	Delete element
+1550539467706	Rename type 'UserAccountService'
+1550539474286	Rename type 'UserAccountServiceImpl'
+1550539514280	Rename type 'AdminAccountDAO'
+1550539543009	Rename type 'AdminAccountDao'
+1550539556029	Rename type 'UserAccountDAOImpl'
+1550546195451	Delete element
+1550560752516	Move file
+1550560754621	Move file
+1550560758412	Delete element
+1550565700995	Rename type 'AdminAccountDAO'
+1550565734091	Rename type 'NoticeAccountDAO'
+1550565748122	Rename type 'AdminAccountDAO'
+1550565753528	Rename type 'AdminAccountDAOImpl'
+1550565769039	Rename type 'Notice'
+1550565775549	Rename type 'NoticeAccountDAOImpt'
+1550565816862	Rename type 'NoticeAccountDAO'
+1550565823655	Rename type 'NoticeAccountDAOImpl'
+1550565893734	Delete element
+1550568187728	Rename type 'AdminAccountService'
+1550568196360	Rename type 'AdminAccountServiceImpl'
+1550568967992	Rename type 'NoticeAccountService'
+1550568973604	Rename type 'NoticeAccountServiceImpl'
+1550633729871	Delete element
+1550647395151	Delete element
+1550647411976	Delete element
+1550730203977	Rename resource 'noticeView'
+1550750122479	Delete element
+1550798357300	Delete element
+1550798365780	Delete element
+1550800350246	Rename type 'Pagination'
+1550804928723	Copy files
+1550808153916	Delete element
+1550816652598	Rename type 'ProductDto'
+1550817302749	Move compilation unit
+1550817305858	Delete element
+1550817374062	Copy package
+1550817426293	Delete element
+1550817431817	Delete element
+1550817436296	Copy package
+1550817444761	Move compilation unit
+1550817450918	Delete element
+1550817460340	Move compilation unit
+1550817468770	Delete element
+1550817480132	Move compilation unit
+1550817482029	Delete element
+1550817494444	Move compilation unit
+1550817496683	Delete element
+1550817532557	Delete element
+1550817770308	Rename resource 'product-mappers.xml'
+1550818228490	Delete element
+1550818408484	Rename compilation unit 'package-info.java'
+1550819462422	Delete elements
+1550819492474	Rename resource 'menu'
+1550819889550	Copy folder
+1550819895066	Delete element
+1550819912613	Copy folder
+1550819925856	Copy folder
+1550819950639	Delete element
+1550820002286	Copy package
+1550820017360	Copy package
+1550820026273	Copy package
+1550820036828	Copy package
+1550820046133	Copy package
+1550820054128	Delete element
+1550820115877	Copy file
+1550820123983	Copy file
+1550820129429	Delete element
+1550821531393	Delete element
+1550824572235	Rename resource 'mail'
+1550824578347	Rename resource 'main.jsp'
+1550824580640	Delete element
+1550824622656	Rename resource 'mailForm.jsp'
+1550824933622	Delete element
+1550854486013	Delete element
+1550854521411	Rename type 'eamilVO'
+1550854679914	Delete element
+1550854683255	Delete element
+1550855431759	Delete element
+1550856972836	Delete element
+1550856982676	Delete element
+1550949840794	Rename type 'commentSErvice'
+1550949942881	Rename type 'commentServiceImpl'
+1550949947844	Rename type 'commentService'
+1550951413399	Delete element

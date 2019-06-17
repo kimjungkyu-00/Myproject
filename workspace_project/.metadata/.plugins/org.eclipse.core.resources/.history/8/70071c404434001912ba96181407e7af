@@ -1,0 +1,194 @@
+package spring.mvc.controller;
+
+import java.sql.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import spring.mvc.dto.MemberVO;
+import spring.mvc.dto.NoticeVO;
+import spring.mvc.service.NoticeService;
+
+@Controller
+public class PetController {
+
+	@RequestMapping(value = "/")
+	public String main(Model model) {		
+		return "main/main";
+	}
+	
+	//관련뉴스
+	@RequestMapping(value = "/info")
+	public String info(Model model) {		
+		return "info/info";
+	}
+	
+	//구조시 대처방법
+	@RequestMapping(value = "/info2")
+	public String info2(Model model) {		
+		return "info/info2";
+	}
+	
+	//입양 안내
+	@RequestMapping(value = "/info3")
+	public String info3(Model model) {		
+		return "info/info3";
+	}
+	
+	//실종시 대처방법
+	@RequestMapping(value = "/info4")
+	public String info4(Model model) {		
+		return "info/info4";
+	}
+	
+	
+	//실종 강아지
+	@RequestMapping(value = "/lost1")
+	public String find(Model model) {		
+		return "lost/find";
+	}
+	
+	//보호중 강아지
+	@RequestMapping(value = "/lost2")
+	public String prot(Model model) {		
+		return "lost/prot";
+	}
+	
+	//보호센터 보호중 동물
+	@RequestMapping(value = "/rescue1")
+	public String rescueDog(Model model) {		
+		return "rescue/rescueDog";
+	}
+	
+	//보호센터 찾기
+	@RequestMapping(value = "/rescue2")
+	public String centerFind(Model model) {		
+		return "rescue/centerFind";
+	}
+	
+	
+	//문의
+	@RequestMapping(value = "/notice1")
+	public String notice1(Model model) {		
+		return "notice/notice1";
+	}
+	@Autowired
+	NoticeService adminService;
+	
+	@RequestMapping(value = "/notice2")
+	public ModelAndView notice(NoticeVO noticeVO) {
+
+		adminService.AdminWriter(noticeVO);
+		
+		// 여기서 공지사항 리스트를 가져온다.		
+		List<NoticeVO> noticeList =  adminService.getNoticeList();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("notice/notice2");
+		mav.addObject("noticeList", noticeList);
+		
+		return mav;
+			
+	}
+		
+	//일반 상식 
+	@RequestMapping(value="/knowledge",method=RequestMethod.GET)
+	public String knowledge(Model model) {		
+		return "knowledge/knowledge";
+	}
+	
+	//동물 보호법
+	@RequestMapping(value = "/knowledge2")
+	public String knowledge2(Model model) {		
+		return "knowledge/knowledge2";
+	}
+	
+	//로그인폼
+	@RequestMapping(value = "/login")
+	public String login(Model model) {		
+		return "login/login";
+	}
+	
+	//로그인 완료
+	@RequestMapping(value = "/loginOk")
+	public String loginOk(Model model) {		
+		return "login/loginOk";
+	}
+	
+	//회원가입 폼
+	@RequestMapping(value = "/signUp")
+	public String signUp(Model model) {		
+		return "signUp/signUpForm";
+	}
+	
+	//회원가입 완료
+	//@RequestMapping(value = "/signUp.do")
+	public String signUpOk(Model model) {
+		return "signUp/signUpOk";
+	}
+	
+	
+	@RequestMapping(value="/write",method=RequestMethod.GET)
+	public String writeForm(Model model) {		
+		return "lost/findWriteForm";
+	}
+	
+	@RequestMapping(value="/prot_write",method=RequestMethod.GET)
+	public String prot_writeForm(Model model) {		
+		return "lost/protWriteForm";
+	}
+	
+	@RequestMapping(value="/protWrite",method=RequestMethod.GET)
+	public String protWriteForm(Model model) {		
+		return "lost/prot";
+	}
+	
+	@RequestMapping(value="/findWrite",method=RequestMethod.GET)
+	public String findWrite(Model model) {		
+		return "lost/find";
+	}
+	
+	@RequestMapping(value="/notice2WriteForm",method=RequestMethod.GET)
+	public String notice2WriteForm(Model model) {		
+		return "notice/notice2WriteForm";
+	}
+
+	
+	
+	
+//	@RequestMapping(value="/signUp.do", method = RequestMethod.POST)
+//	public String paramView(MemberDto mem, BindingResult result) {
+//		String nextPage = "signUp/signUpOk";
+//		
+//		//유효성 검사(서버에서)
+//		MemberValidator validator = new MemberValidator();
+//		validator.validate(mem, result);
+//		
+//		//error
+//		if(result.hasErrors()) {
+//			System.out.println("hasErrors()");
+//			return "signUp/signUpForm";
+//		}
+//		
+//		MemberDao dao = new MemberDaoImpl();
+//		dao.insert(mem);
+//		
+//		MemberDto search = dao.get(mem.getUserid()); 
+//		System.out.println("insert id : " + search.getUserid());
+//		
+//		List<MemberDto> list = dao.getAllList();
+//		System.out.println(list);
+//		
+//		return nextPage;
+	
+		
+	
+}

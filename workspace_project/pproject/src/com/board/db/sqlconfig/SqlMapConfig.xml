@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ 
+<!--  꼭 순서대로 -->
+<configuration>
+
+
+	
+    <!-- DB 프로필 -->
+	    <properties resource="com/board/db/sqlconfig/SqlMapConfig.properties" />
+    <!-- 접속정보를 저장한 properties파일을 지정합니다. -->
+ 
+    
+    <!-- 알리아스 설정 -->
+    <typeAliases>
+        <typeAlias alias="BoardDto" type="board.dto.BoardDto"/>
+        <typeAlias alias="PageDto" type="board.dto.PageDto" />
+    </typeAliases>
+    
+    
+    
+    <!-- DB 셋팅 -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+            <property name="JDBC.Driver" value="${driver}"/>
+            <property name="JDBC.ConnectionURL" value="${url}"/>
+            <property name="JDBC.id" value="${id}"/>
+            <property name="JDBC.pw" value="${pw}"/>
+            <property name="Pool.MaximumActiveConnections" value="10"/>
+            <property name="Pool.MaximumIdleConnections" value="10"/>
+            <property name="Pool.MaximumWait" value="60000"/>
+            <property name="Pool.ValidationQuery" value="select 1 from dual"/>
+            <property name="Pool.LogAbandoned" value="false"/>
+            <property name="Pool.RemoveAbandoned" value="false"/>
+            <property name="Pool.RemoveAbandonedTimeout" value="60000"/>
+            </dataSource>
+        </environment>
+    </environments>
+  
+    <!-- SQL -->
+    <mappers>
+        <mapper resource="com/board/db/sqlmaps/Board.xml"/>
+    </mappers>
+</configuration>    
