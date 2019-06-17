@@ -1,0 +1,20 @@
+public ArrayList<Pet> getPetList() throws SQLException {
+		ArrayList<Pet> list=null;
+		list = new ArrayList<Pet>();
+	
+		//3.2 쿼리전송
+		String query="SELECT * FROM PET";
+		ResultSet resultset = statement.executeQuery(query);
+		
+		//3.3 쿼리결과 출력
+		//쿼리결과 -list에 넣어주기
+		while(resultset.next()) {
+			Pet petlist = new Pet(resultset.getString("name"),
+								resultset.getString("owner"),
+								resultset.getString("species"),
+								resultset.getDate("birth"));
+			list.add(petlist);
+		}
+		
+		return list;
+	}

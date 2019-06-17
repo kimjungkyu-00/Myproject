@@ -1,0 +1,109 @@
+MY SQL 
+show tables; // 테이블 목록검색
+desc student// 테이블 컬럼명확인?
+
+
+
+1. 생성
+	데이터 베이스 : create
+	테이블 Create table 이름(컬럼명 type , 칼럼명2 type,primary);
+
+2. 삭제
+	Drop table 이름;
+
+3. 검색
+	Select * from 테이블 명;
+	//  id값으로 찾기  select * from 테이블명 where id='id값';   **//
+	//  테이블에있는 찾고하자는 값만 보는법 :  select (컬럼명) from 테이블명; 
+	       ex) 테이블에있는 컴퓨터공학인 계정찾기  select * from student where dept'컴퓨터공학';  
+
+4.수정(데이터)
+테이블의 데이터 : Update,
+테이블 컬럼 : alter add/drop
+
+데이터베이스 관련 명령
+
+
+
+데이터 제어문 추가적으로 사용하는 문장
+1. 검색/수정.삭제
+2. Where
+      조건에 따른 검색
+      문법 where 컬럼명 = 값
+3.
+4.
+
+
+
+
+1. 컬럼생성ALTER TABLE [테이블명] ADD(
+   [추가할 컬럼명  ] varchar(100) not null,
+   [추가할 컬럼명  ] varchar(20) not null
+);
+2. 컬럼수정
+3. 컬럼삭제 : ALTER TABLE 테이블명 DROP COLUMN 컬럼명;
+
+
+
+
+
+< MY SQL)~20page >
+Fluffy Harold cat f 1993-02-04 \N
+Claws Gwen cat m 1994-03-17 \N
+Buffy Harold dog f 1989-05-13 \N
+Fang Benny dog m 1990-08-27 \N
+Bowser Dianne dog m 1998-08-31 1995-07-29
+Chirpy Gwen bird f 1998-09-11 \N
+Whistler Gwen bird \N 1997-12-09 \N
+Slim Benny snake m 1996-04-29 \N
+
+고양이이면서 성별은 f
+
+
+
+select * from pet where name like "f%y";  // 마지막 두글자 name 찾는법  "%fy"; , 중간에 글자 "%f%";
+
+select owner, count(*) from pet group by owner; // count= 주인의 동물들이 몇마리인지 확인 ex : owner1 : dog 1 , owner2: cat1 
+
+select species, count(*) from pet group by species; //  동물들끼리 분류해서 몇마리인지확인 ex : dog 1 , bird 1, cat 2 
+
+select species,sex, count(*) from pet group by species,sex;  // 두가지 그룹지어서 찾기.
+
+
+
+create table customer(
+
+	no INTEGER not null primary key,
+ 
+	name CHAR(20) not null,
+	age TINYINT,
+
+	phone VARCHAR(20)
+	 email VARCHAR(30) not null,
+	 address VARCHAR(50)
+
+	);
+
+
+
+
+
+load data local infile 'C:\\Users\\pet.txt'  into table pet  fields terminated by ' '  lines terminated by '\r\n';
+//txt 파일 불러오기
+
+
+
+
+//1. jdbc 드라이버 생성(로드)
+Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+//2. 서버에 연결하기
+??? = DriverManager.getConnection(url,lid,pw)
+"jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC","계정명", "비밀번호");
+//3. 쿼리 전송을위한 statement 생성
+//3-1 query 전송
+
+//4.수행된 쿼리문 출력
+
+//5. 쿼리 statement 자원해제
+
+//6.드라이버 (conect)자원해제
