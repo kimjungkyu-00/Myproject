@@ -1,0 +1,3 @@
+memberAdd.do= mvc.model.MemberAddModel());
+Memberlist.do=mvc.model.MemberListModel());
+memberinfor2.do=mvc.model.MemberInforModel());

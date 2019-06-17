@@ -1,0 +1,36 @@
+package test10;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		int array=5;
+		int r=0;
+		int c=1;
+		int[][] arr= new int[array][array];
+		int sw=-1;
+		int k=5;
+		int x=1;
+		while(true) {
+			for(int i=0; i<k;i++) {
+				c = c+=sw;
+				arr[r][c]=x++;
+			}
+			if(k==0) {
+				break;
+			}
+				k--;
+				
+			for(int j=0; j<k;j++) {
+				r = r+=sw;
+				arr[r][c]=x++;
+			}
+			sw= sw*-1;
+		}
+		for(int i=0;i<array;i++) {
+			for(int j=0;j<array;j++) {
+				System.out.print(arr[r][c]);
+			}System.out.println();
+		}
+	}
+}

@@ -1,0 +1,43 @@
+package test8;
+
+public class main {
+
+	public static void main(String[] args) {
+		int n;
+		int col,row;
+		int k=0;
+		int[][] snail=new int[5][5];
+		int i=1;
+		
+		
+		for(n=5;n>0;n-=2) {
+			for(col=0;col<n;col++) {
+				snail[k][k+col]=i;
+				i++;
+			}
+			
+			for(row=1;row<n;row++) {
+				snail[k+row][5-k-1]=i;
+				i++;
+			}
+			
+			for(col=1;col<n;col++) {
+				snail[k+row-1][5-k-col-1]=i;
+				i++;
+			}
+			for(col=1;col<n-1;col++) {
+				snail[5-k-col-1][k]=i;
+				i++;
+			}
+			
+			k++;
+		}
+		for(row=0;row<n;row++) {
+			for(col=0;col<n;col++) {
+				System.out.printf("%d"+snail[row][col]);
+			}System.out.println("");
+		}
+		
+		
+	}
+}

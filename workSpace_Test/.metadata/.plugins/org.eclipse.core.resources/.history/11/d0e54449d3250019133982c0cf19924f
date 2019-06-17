@@ -1,0 +1,46 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		boolean t= true;
+		int num; // 숫자 저장할 배열
+		int max=0;
+		int min=0;
+		
+		List<Integer> list = new ArrayList<Integer>();
+		
+		
+		
+		
+//        int count;        
+        System.out.println("숫자를 입력 = ");
+//        count = sc.nextInt();
+//        num = new int[count];
+//        for(int i=0;i<num.length;i++) {
+//        	
+//        	
+//        	
+//        	
+//        }
+       num= sc.nextInt();
+       list.add(num);
+			while( num != 0) {
+				num= sc.nextInt();
+			       list.add(num);
+			}
+			
+			for(int i=0; i<list.size();i++) {
+				
+				if(list.get(i)<list.get(i+1) || (list.get(i)>list.get(i+1))) {
+					System.out.println("max"+list.get(i));
+				}
+			}
+		
+
+	}
+
+}

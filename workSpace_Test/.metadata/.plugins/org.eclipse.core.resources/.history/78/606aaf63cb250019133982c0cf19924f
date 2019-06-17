@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		boolean t= true;
+		int num=sc.nextInt();
+		int n;
+		while(t) {
+			n=num;
+		
+			System.out.println(n);
+			
+			if(num==0) {
+				System.out.println();
+				break;
+			}
+			
+		}
+
+	}
+
+}

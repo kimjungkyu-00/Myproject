@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		boolean t= true;
+		int num; 
+		int max=0;
+		int min=0;
+
+   
+   
+        System.out.println("숫자를 입력 = ");
+
+
+    
+        
+			while((num=sc.nextInt()) != 0) {
+				
+				
+			}
+			
+		
+
+	}
+
+}

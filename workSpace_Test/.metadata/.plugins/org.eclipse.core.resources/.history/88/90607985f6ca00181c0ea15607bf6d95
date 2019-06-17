@@ -1,0 +1,11 @@
+import java.io.IOException;
+
+public class ExServerMain {
+	public static void main(String[] args) {
+		try {
+			ServerMain server = new ServerMain(6000);
+			server.start();
+			
+		} catch (IOException e) {e.printStackTrace();}
+	}
+}

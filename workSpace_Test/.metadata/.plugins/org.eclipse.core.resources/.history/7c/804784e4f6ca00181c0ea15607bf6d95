@@ -1,0 +1,57 @@
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ExServerSocket extends Thread{
+	ServerSocket serverSocket = null;
+	Socket clientSocket = null;
+	int port  = 6000;
+	boolean run = true;
+	
+	public ExServerSocket(int port) throws IOException {	
+		//1.소켓생성
+		serverSocket = new ServerSocket(port);
+		System.out.println("server start ["+port+"]");
+	}
+	
+	public void run() {
+	
+		while(run) {
+			//2.클라언트 접속 기다림
+			//클라언트 접속되면 소켓 생성
+		try {
+			clientSocket = serverSocket.accept();
+		
+			InetSocketAddress clientAddr =(InetSocketAddress)
+					     clientSocket.getRemoteSocketAddress();
+			System.out.println("client ["+clientAddr.getAddress()+
+					          "] connect");
+			
+			//2.통신 (클라이언트 별로 thread생성하여 동작)
+				ClientMain client 
+				         = new ClientMain(clientSocket);
+				client.start();				
+			} catch (IOException e) {e.printStackTrace();
+			}
+				
+		}
+		//4.서버 소켓 닫기
+		try {
+			serverSocket.close();
+		} catch (IOException e) {
+			if( !serverSocket.isClosed() ) {
+				try {
+					serverSocket.close();
+				} catch (IOException e1) {e1.printStackTrace();	}
+			}
+			e.printStackTrace();
+		}
+	}
+	
+	public void serverStop() {
+		run = false;
+	}	
+}

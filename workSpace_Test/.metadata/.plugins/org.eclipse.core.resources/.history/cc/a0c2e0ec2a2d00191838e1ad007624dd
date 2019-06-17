@@ -1,0 +1,14 @@
+package test10;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		int array=5;
+		int r=0;
+		int c=-1;
+		int[][] arr= new int[array][array];
+		
+	}
+
+}

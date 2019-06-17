@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		boolean t= true;
+		int n;
+		
+			int num=sc.nextInt();
+
+			if(num==0) {
+				System.out.println();
+			}
+			
+		
+		System.out.println();
+
+	}
+
+}

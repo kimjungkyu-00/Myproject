@@ -1,0 +1,22 @@
+package snail4;
+
+public class main {
+
+	public static void main(String[] args) {
+		int arrSize=5;
+		int[][] arr=new int[arrSize][arrSize];
+		int r=-1;
+		int c=0;
+		int k=arrSize;
+		int sw=1;
+		int n=1;
+		
+		for(int i=0;i<k;i++) {
+			r+=sw;
+			arr[c][r]=n++;
+			System.out.print(arr[c][r]);
+		}System.out.println();
+		
+	}
+
+}

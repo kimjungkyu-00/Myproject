@@ -1,0 +1,39 @@
+package snail4;
+
+public class main {
+
+	public static void main(String[] args) {
+		int arrSize = 5;
+		int[][] arr = new int[arrSize][arrSize];
+		int r = 4;
+		int c = 1;
+		int k = arrSize; // 반복횟수
+		int sw = -1;
+		int n = 1;
+		while (true) {
+			for (int i = 0; i < k; i++) {
+				c += sw;
+				arr[c][r] = n++;
+			}
+			k--;
+
+			if (k == 0) {
+				break;
+			}
+			for (int j = 0; j < k; j++) {
+				r += sw;
+				arr[c][r] = n++;
+			}
+//			sw*=-1;
+
+		}
+		
+		for(int i=0;i<arrSize;i++) {
+			for(int j=0;j<arrSize;j++) {
+				System.out.print(arr[i][j]+" ");
+			}System.out.println();
+		}
+
+	}
+
+}

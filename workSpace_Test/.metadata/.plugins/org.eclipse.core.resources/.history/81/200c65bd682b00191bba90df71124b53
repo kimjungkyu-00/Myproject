@@ -1,0 +1,11 @@
+package snail3;
+
+public class main {
+
+	public static void main(String[] args) {
+		int arrSize=5;
+		int[][] arr=int[arrSize][arrSize];
+		
+	}
+
+}
