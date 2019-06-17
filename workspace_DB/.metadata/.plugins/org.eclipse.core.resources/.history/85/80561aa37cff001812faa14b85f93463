@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+           <%@page import="dao.MyDB" %>
+    
+<%
+  		//한글처리
+	    request.setCharacterEncoding("utf-8");
+    	//form에서 넘겨준 데이터 받기
+    	String reqId = request.getParameter("edit_id");
+    	String reqPw = request.getParameter("edit_pw");
+    	String reqName = request.getParameter("edit_name");
+    	String reqTel = request.getParameter("edit_tel");
+    	out.print("변경할 id : "+reqId+","+"변경된암호"+reqPw+"변경된이름"+reqName+"변경된 번호"+reqTel);
+  
+    	
+    	//db접속하여 db정보 변경
+    	//1.드라이버 로드. db연결
+	    MyDB mydb=null;
+    	try{
+
+	    	mydb = new MyDB();
+	    	
+	    	mydb.editMemberedit(reqId,reqPw,reqName,reqTel);
+	    	
+
+    	}catch(Exception e){
+    		out.print(e.getMessage()); e.printStackTrace();
+    	}finally{
+	    	mydb.close();
+    	}
+%>

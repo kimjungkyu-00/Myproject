@@ -1,0 +1,45 @@
+package dao;
+
+import java.sql.*;
+
+import dto.Member;
+
+public class MyDB {
+	final static String DRIVER="com.mysql.cj.jdbc.Driver";
+	String url="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC"
+			+"&useUnicode=true"+"&characterEncoding=utf-8";
+	String id="root";
+	String pw="1234";
+	
+	Connection conn= null;
+	
+	public MyDB() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+		//1. jdbc 드라이버 생성(로드)
+		Class.forName(DRIVER).newInstance();
+		connect();
+	}
+	
+	private void connect() throws SQLException {
+		//2. 서버에 연결하기
+		conn =DriverManager.getConnection(url,id,pw);
+	}
+	
+	public void insertMember(Member mem) {
+		insertMember(mem.getId(),mem.getPw(),mem.getName(),mem.getTel());
+	}
+	
+	public void insertMember(String id, String pw , String name , String tel) throws SQLException {
+		PreparedStatement preStmt = null;
+		String query="INSERT register valuse=(?,?,?)";
+		preStmt = conn.prepareStatement(query);
+
+		preStmt.setString(1,id);
+		preStmt.setString(2,pw);
+		preStmt.setString(3,name);
+		preStmt.setString(4,tel);
+		preStmt.executeUpdate();
+		
+		if(null != preStmt)
+			preStmt.close();
+	}
+}

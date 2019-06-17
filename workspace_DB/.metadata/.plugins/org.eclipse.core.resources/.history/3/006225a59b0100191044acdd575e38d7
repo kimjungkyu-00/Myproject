@@ -1,0 +1,23 @@
+package com.db;
+
+import org.apache.tomcat.jdbc.pool.PoolProperties;
+
+public class MyConnPool {
+	private final static String URL  = "jdb:mysql://localhost:3306/mydb?serverTiemzone=UTC";
+	private final static String DRIVER ="com.mysql.cj.jdbc.Driver";
+	String dbUser = "root";
+	String dbPw = "1234";
+	private void init() {
+		//connection pool 설정하기
+		PoolProperties p = new PoolProperties();		
+		p.setUrl(URL);//url
+		p.setDriverClassName(DRIVER); //driver
+		p.setUsername(dbUser);
+		p.setPassword(dbPw);
+		p.setJmxEnabled(true);
+		p.setTestWhileIdle(false);
+		p.setTestOnBorrow(false);
+		p.setValidationQuery("select 1");
+		
+	}
+}

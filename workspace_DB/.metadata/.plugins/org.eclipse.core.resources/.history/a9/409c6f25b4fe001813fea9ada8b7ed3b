@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	String title = request.getParameter("title");
+	String author = request.getParameter("author");
+	String content = request.getParameter("content");
+
+	Border border = new Border();
+	border.setTitle(title);
+	border.setAuthor(author);
+	border.setContent(content);
+	
+	BorderDao dao = new BorderDao();
+
+	dao.addBorder(border);
+%>
+</body>
+</html>

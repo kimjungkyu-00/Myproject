@@ -1,0 +1,12 @@
+package com.db;
+
+import org.apache.tomcat.jdbc.pool.PoolProperties;
+
+public class MyConnPool {
+	
+	private void init() {
+		//connection pool 설정하기
+		PoolProperties p = new PoolPeroperties();
+		
+	}
+}

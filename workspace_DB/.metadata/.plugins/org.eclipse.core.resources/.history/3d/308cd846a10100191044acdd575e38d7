@@ -1,0 +1,101 @@
+package com.db;
+
+import java.sql.*;
+import java.util.ArrayList;
+
+import org.apache.tomcat.jdbc.pool.DataSource;
+import org.apache.tomcat.jdbc.pool.PoolProperties;
+
+public class MyConnPool {
+	private final static String URL  = "jdbc:mysql://localhost:3306/mydb?serverTiemzone=UTC";
+	private final static String DRIVER ="com.mysql.cj.jdbc.Driver";
+	String dbUser = "root";
+	String dbPw = "1234";
+	Connection conn = null;
+	
+	public MyConnPool(){
+		init();
+	}
+	
+	private void init() {
+		//connection pool 설정하기
+		PoolProperties p = new PoolProperties();		
+		p.setUrl(URL);//url
+		p.setDriverClassName(DRIVER); //driver
+		p.setUsername(dbUser);
+		p.setPassword(dbPw);
+		p.setJmxEnabled(true);
+		//연결 테스트 관련 설정
+		p.setTestWhileIdle(false);
+		p.setTestOnBorrow(false);
+		p.setValidationQuery("select 1");
+		p.setTestOnReturn(false);
+		//컨넥션 유휴 설정
+		p.setValidationInterval(30000);
+		p.setTimeBetweenEvictionRunsMillis(30000);
+		
+		//컨넥션 풀설정
+		p.setMaxActive(100);
+		p.setInitialSize(10);
+		p.setMaxWait(10000);
+		p.setRemoveAbandonedTimeout(60);
+		p.setMinIdle(10);
+		p.setLogAbandoned(true);
+		p.setRemoveAbandoned(true);
+		p.setJdbcInterceptors(
+				"org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;"+
+	            "org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer");
+		
+		//db연결 설정 정보를 
+		DataSource datasource = new DataSource();
+		datasource.setPoolProperties(p);
+		
+		
+		//db연결
+		
+		try {
+			conn = datasource.getConnection();
+			System.out.println("cnffur");
+		} catch (SQLException e) {e.printStackTrace();	}
+		
+	}
+	
+	public ArrayList<Member> getMemberList(){
+		ArrayList<Member> list=new ArrayList<Member>();
+		
+		String sql = "SELECT * FROM MEMBER";
+		PreparedStatement ptsmt = null;
+		try {
+			ptsmt = conn.prepareStatement(sql);
+		
+		 ResultSet resultSet = ptsmt.executeQuery();
+
+		while( resultSet.next()) {
+			Member member = new Member();
+			member.setId(resultSet.getString("id"));
+			member.setPasswd(resultSet.getString("passwd"));
+			member.setName(resultSet.getString("name"));
+			member.setDate(resultSet.getString("reg_date"));
+
+			list.add(member);
+			System.out.println(member);
+		}
+		
+		} catch (SQLException e) {
+		System.out.println(e.getMessage());
+		e.printStackTrace();
+		}finally {
+			if(ptsmt != null) {
+				try {
+					ptsmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+				
+		}
+		 
+		return list;
+		
+	}
+}

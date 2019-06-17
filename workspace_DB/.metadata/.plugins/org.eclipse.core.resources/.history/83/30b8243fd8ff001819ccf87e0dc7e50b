@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<jsp:include page="header.jsp"/>
+<body>
+	<form action="memberedit_pro.jsp">
+		<p>아이디 <input type="text" name="edit_id"></p>
+		<p>회원수정 비번 <input type="text" name="edit_pw">
+		<p>회원수정 이름 <input type="text" name="edit_name">
+		<p>회원수정 번호 <input type="text" name="edit_tel">
+		<input type="submit" value="수정하기">
+	</form>
+</body>
+</html>

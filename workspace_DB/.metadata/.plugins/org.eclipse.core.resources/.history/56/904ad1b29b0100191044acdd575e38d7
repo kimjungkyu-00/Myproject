@@ -1,0 +1,27 @@
+<%@page import="dto.Member"%>
+<%@page import="dao.MyDB"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	String id = request.getParameter("id");
+	String passwd = request.getParameter("passwd");
+	String name = request.getParameter("name");
+	String date = request.getParameter("date");
+	
+	Member newMember = new Member(id,passwd,name,date);
+	
+	MyDB mydb = new MyDB();
+	
+	mydb.insertMember(newMember);
+	
+	mydb.close();
+%>
+</body>
+</html>

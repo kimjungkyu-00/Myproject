@@ -1,0 +1,32 @@
+package database;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import javax.servlet.http.HttpServletRequest;
+
+
+//data를 관리(border list )
+public class BorderDao {
+
+	String driver="com.mysql.cj.jdbc.Driver";
+	String url="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC"
+			+"&useUnicode=true"+"&characterEncoding=utf-8";
+	String id="root";
+	String pw="1234";
+	Connection conn = null;
+	
+	public BorderDao(HttpServletRequest request) {
+	
+	}	
+	
+	public void addBorder(Border border) {
+		
+	}
+	
+	public ArrayList<Border> getBorderList(){
+		ArrayList<Border> list= new ArrayList<Border>();
+		
+		return list;
+	}
+	
+}

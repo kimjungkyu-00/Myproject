@@ -1,0 +1,10 @@
+package com.db;
+
+import javax.naming.*;
+
+public class MyDBConnPoolRes {
+
+	private void init() {
+		Context iniCtx = new InitialContext();
+	}
+}

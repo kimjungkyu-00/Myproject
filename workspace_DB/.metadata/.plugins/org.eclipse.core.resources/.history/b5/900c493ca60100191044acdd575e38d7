@@ -1,0 +1,16 @@
+package com.db;
+
+import java.sql.*;
+
+import javax.naming.*;
+
+public class MyDBConnPoolRes {
+
+	Connection conn = null;
+	private void init() {
+		Context initCtx = new InitialContext();
+		Context envCtx =(Context)initCtx.lookup("java:comp/env");
+		DataSource datasource = envCtx.lookup("jdbc/mydb");
+		conn = datasource.getConnection();
+	}
+}

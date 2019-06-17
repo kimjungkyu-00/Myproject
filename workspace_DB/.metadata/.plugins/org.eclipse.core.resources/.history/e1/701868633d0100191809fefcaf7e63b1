@@ -1,0 +1,64 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<jsp:include page="header.jsp"/>
+
+<body class="hm-gradient">
+    
+    <body class="hm-gradient">
+    
+    <main>
+        
+        <!--MDB Forms-->
+        <div class="container mt-4">
+
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="text-center default-text py-3"><i class="fa fa-lock"></i> Login:</h3>
+                            <!--Body-->
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix grey-text"></i>
+                                <input type="text" id="defaultForm-email" class="form-control">
+                                <label for="defaultForm-email">Your email</label>
+                            </div>
+                            <div class="md-form">
+                                <i class="fa fa-lock prefix grey-text"></i>
+                                <input type="password" id="defaultForm-pass" class="form-control">
+                                <label for="defaultForm-pass">Your password</label>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-default waves-effect waves-light">next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                      
+            <hr class="my-4">
+          
+
+        </div>
+        <!--MDB Forms-->
+      
+    </main>
+    
+        <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+  
+</body>
+</body>
+</html>

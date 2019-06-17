@@ -1,0 +1,31 @@
+package com.db;
+
+import java.sql.*;
+
+import javax.naming.*;
+import javax.sql.DataSource;
+
+public class MyDBConnPoolRes {
+
+	Connection conn = null;
+	private void init() {
+		Context initCtx;
+		try {
+			initCtx = new InitialContext();
+		
+		Context envCtx =(Context)initCtx.lookup("java:comp/env");
+		DataSource datasource = (DataSource)envCtx.lookup("jdbc/mydb");
+
+			conn = datasource.getConnection();
+
+	} catch (NamingException e) {
+		e.printStackTrace();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+		
+		public void insertMember() {
+			String sql = "insert into member values(?,?,?,?)";"
+		}
+}
+}

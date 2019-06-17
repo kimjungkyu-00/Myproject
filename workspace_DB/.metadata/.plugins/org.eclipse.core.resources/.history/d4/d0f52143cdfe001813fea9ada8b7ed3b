@@ -1,0 +1,65 @@
+package mvc.control;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import mvc.model.RegisterProcess;
+import mvc.model.Service;
+
+
+@WebServlet("*.do")
+public class MyControl extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+      private Map<String , Service> map = new HashMap<>();
+
+    public MyControl() {
+        super();
+    }
+    
+    private void initMap() {
+    	map.put("regiseter.do",new RegisterProcess());
+    	map.put("member_edit.do",new MemberEditProcess());
+    	map.put("member_del.do",new MemberDelProcess());
+    	map.put("member_list.do",new MemberListProcess());
+    	System.out.println("------------------map size : "+map.size());
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		initMap();
+		
+		//1.url 분석
+		System.out.println("url :"+request.getRequestURI());
+		String[] urlArr = request.getRequestURI().split("/");
+		String reqUrl = urlArr[urlArr.length-1];
+		System.out.println("reqUrl : "+reqUrl);
+		
+		//2.url에 맞는 서비스처리
+		String forwardPage  =null;
+			Service service= map.get(reqUrl);
+			if(null != service) {
+				forwardPage = service.process(request, response);
+			}
+			System.out.println("forwardPage : "+forwardPage);
+			
+		//3.forwardPage이동
+			if(null != forwardPage) {
+				RequestDispatcher dispatcher = request.getRequestDispatcher(forwardPage);
+				dispatcher.forward(request, response);
+			}
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

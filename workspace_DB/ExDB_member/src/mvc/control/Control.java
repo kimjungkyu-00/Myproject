@@ -1,0 +1,57 @@
+package mvc.control;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import mvc.model.RegisterProcess;
+import mvc.model.Service;
+
+//@WebServlet("*.do")
+public class Control extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	Map<String,Service> map = new HashMap<>();
+	
+	private void initMap() {
+		map.put("regiseter.do", new RegisterProcess());
+	}
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//map 초기화
+		initMap();
+		System.out.print("url : "+request.getRequestURI());
+		
+		//주소가져오기
+		String url=request.getRequestURI();
+		String[] urlArr= url.split("/");
+		String reqUrl = urlArr[urlArr.length-1];
+		System.out.println("req page :"+reqUrl);
+		
+		//서비스맞게 보내기
+		Service service = null;
+		service = map.get(reqUrl);
+		//서비스 처리
+		String forwardPage = null;
+		if(null != service) {
+			forwardPage = service.process(request, response);
+		}
+		//다음페이지 이동
+		if(null != forwardPage) {
+			RequestDispatcher dispatcher 
+				=request.getRequestDispatcher(forwardPage);
+			dispatcher.forward(request, response);
+		}
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

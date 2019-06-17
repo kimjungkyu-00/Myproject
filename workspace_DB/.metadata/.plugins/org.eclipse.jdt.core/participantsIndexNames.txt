@@ -1,0 +1,19 @@
+INDEX VERSION 1.131
+C:\source\workspace_DB\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\720110827.index
+\EXDB_Project\src
+C:\source\workspace_DB\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\10670617.index
+\EXDB_Project\src
+C:\source\workspace_DB\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2459998068.index
+\EXDB_Border\src
+C:\source\workspace_DB\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1779092827.index
+\CoffeProj\src
+C:\source\workspace_DB\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\844851870.index
+\ExDB-Connpool\src
+C:\source\workspace_DB\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3665496615.index
+\ExDB_Connpool_xml\src
+C:\source\workspace_DB\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2079560592.index
+\ExBorder\src
+C:\source\workspace_DB\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4057079499.index
+\ExDB_member\src
+C:\source\workspace_DB\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3809479651.index
+\ExDB_JSP\src

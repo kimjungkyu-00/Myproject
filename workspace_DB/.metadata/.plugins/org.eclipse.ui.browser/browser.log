@@ -1,0 +1,52 @@
+
+12월 13, 2018 19:21:45.04 NEW SESSION
+12월 13, 2018 19:21:45.04 [8948:12040:1213/192145.042:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 13, 2018 19:22:14.86 [8948:12040:1213/192214.862:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 13, 2018 19:23:07.69 [8948:12040:1213/192307.695:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 13, 2018 19:24:47.90 [13820:2804:1213/192447.899:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 13, 2018 19:25:16.30 [13820:2804:1213/192516.300:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 13, 2018 19:26:13.16 [13820:2804:1213/192613.167:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 13, 2018 19:26:26.69 [13820:2804:1213/192626.692:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -21
+12월 13, 2018 22:03:29.72 [14608:16068:1213/220329.721:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -21
+
+12월 14, 2018 16:18:29.82 NEW SESSION
+12월 14, 2018 16:18:29.83 [10088:8268:1214/161829.827:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 14, 2018 16:18:29.94 [10088:8268:1214/161829.854:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+12월 14, 2018 16:18:55.05 [10088:8268:1214/161855.054:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 14, 2018 16:18:55.14 [10088:8268:1214/161855.143:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+12월 14, 2018 16:19:39.44 [10088:8268:1214/161939.440:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+12월 14, 2018 16:19:43.55 [10088:7260:1214/161943.558:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+12월 14, 2018 16:19:53.51 [10088:8268:1214/161953.511:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 14, 2018 16:20:06.98 [10088:7260:1214/162006.981:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+12월 14, 2018 16:20:56.74 [10088:7260:1214/162056.740:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+12월 14, 2018 16:21:31.21 [10088:8268:1214/162131.217:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 14, 2018 16:21:34.82 [10088:8268:1214/162134.825:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+12월 14, 2018 16:21:54.69 [5632:8428:1214/162154.691:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+12월 14, 2018 16:21:54.70 [5632:8428:1214/162154.692:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 14, 2018 16:22:18.68 [5632:8428:1214/162218.681:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+12월 14, 2018 16:22:21.73 [5632:8428:1214/162221.737:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 14, 2018 16:23:25.55 [1352:4124:1214/162325.554:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 14, 2018 16:23:25.58 [1352:4124:1214/162325.581:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+12월 14, 2018 16:23:50.96 [1352:4124:1214/162350.961:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 14, 2018 16:23:53.66 [1352:4124:1214/162353.665:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+12월 14, 2018 16:24:02.18 [1352:4124:1214/162402.187:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -105
+12월 14, 2018 16:24:23.18 [1352:4124:1214/162423.188:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 14, 2018 16:24:36.17 [1352:4124:1214/162436.175:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -105
+
+12월 15, 2018 04:27:24.18 NEW SESSION
+12월 15, 2018 04:27:24.18 [9668:10204:1215/042724.152:ERROR:textfield.cc(1767)] NOT IMPLEMENTED
+
+12월 16, 2018 14:00:15.46 NEW SESSION
+12월 16, 2018 14:00:15.46 [41512:31036:1216/140015.464:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 16, 2018 14:00:45.08 [41512:31036:1216/140045.084:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 16, 2018 14:01:19.09 [41512:8704:1216/140119.096:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+12월 16, 2018 14:01:27.36 [41512:31036:1216/140127.366:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 16, 2018 14:01:47.75 [41512:8704:1216/140147.749:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+12월 16, 2018 14:02:43.60 [41512:8704:1216/140243.608:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+12월 16, 2018 14:03:14.43 [41512:31036:1216/140314.431:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 16, 2018 17:03:45.83 [41512:31036:1216/170345.834:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+12월 16, 2018 17:03:46.25 [41512:8704:1216/170345.849:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+12월 16, 2018 17:03:46.27 [41512:31036:1216/170346.242:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+12월 16, 2018 22:51:25.18 [41512:8704:1216/225125.189:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+12월 16, 2018 22:51:25.26 [41512:31036:1216/225125.220:ERROR:checkin_request.cc(219)] Failed to get checkin response. Fetcher failed. Retrying.
+12월 16, 2018 22:51:25.31 [41512:31036:1216/225125.220:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106

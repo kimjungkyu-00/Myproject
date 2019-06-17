@@ -1,0 +1,44 @@
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.MyDB"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>목록 출력</h3>
+<hr>
+
+<%@page import="java.sql.*"%>
+<%
+	MyDB mydb =null;
+
+try{
+	mydb = new MyDB();
+	mydb.conect();
+	ArrayList<Member> list = mydb.Memberlist();
+	if(null != list){
+		for (int i=0; i< list.size(); ++i){
+			Member mem = list.get(i);
+			out.print(" "+mem.getId());
+			out.print("&nbsp;&nbsp;&nbsp; "+mem.getPw());
+			out.print(" &nbsp;&nbsp;&nbsp;"+mem.getName()+"<br>");
+			out.print(" &nbsp;&nbsp;&nbsp;"+mem.getTel()+"<br>");
+			
+		}
+	}
+}catch(Exception e){
+		out.print(e.getMessage());
+	}finally{
+		mydb.close();
+	}
+%>
+
+</script>
+</body>
+</html>
